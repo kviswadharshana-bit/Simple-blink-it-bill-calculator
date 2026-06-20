@@ -1,0 +1,145 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>online shopping</title>
+</head>
+<style>
+    body{
+    background-color:blanchedalmond;
+    font-family:Algerian;
+    align-content: center;
+    text-align: center;
+    }
+    header{
+        border-right-style: double;
+        font-family: Algerian;
+        font-display: block;
+        font-size : 34px;
+   
+    }
+    h1{
+        text-align: center;
+    }
+    .product{
+        display: inline-block;
+        margin : 20px;
+        text-align:center;
+    }
+   
+    button {
+    align-content: center;
+    background-color: seagreen;
+    color: white;
+    font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', serif;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+ 
+button:hover {
+    background-color: darkgreen;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
+<header>
+   <h1> BLINK IT!!</h1><br>              <i>- Your Door Step Shopping</i></header>
+<body>
+    <h2> Choose The items You Want Buy</h2><br><br>
+    <h3>
+    Products</h3>
+    <div class ="product">
+<img src=   "E:\22csce046\milk.jpg" alt = "MILK" width = "200px" height ="250px">
+    <p><b>Product Name :Aarokya Milk Packet</b></p>
+    <p><b>Price : Rs. 26</b></p>    
+<input type ="checkbox" id ="c1" value ="26">Milk Packet <br><br>
+</div>
+
+ 
+    <div class="product">
+<img src=  "E:\22csce046\veg.jpg" alt = "Vegetables" width= "250px" height="200px"><br>
+    <p><b>Product Name :Vegetable
+    <br>(1 kg Onion,tomato,Carrot and potato) </b></p>
+    <p><b>Price : Rs. 156</b></p>    
+<input type ="checkbox" id ="c2" value ="156">Vegetables<br><br><br>
+    </div>
+   
+<div class="product">
+<img src=  "E:\22csce046\basu.jpg" alt="Basmathi Rice" >
+   
+   
+    <p><b>Product Name :India Gate Basmati Rice 1KG </b></p>
+    <p><b>Price : Rs. 74</b></p>    
+<input type ="checkbox" id ="c3" value ="74">Basmati Rice<br><br><br>
+</div><br><br><br>
+                                 
+<div class="product">
+<img src=    "E:\22csce046\paneer.jpg" alt="Panner">
+    <p><b>Product Name : Nandhini Paneer </b></p>
+    <p><b>Price : Rs.80</b></p>    
+<input type ="checkbox" id ="c4" value ="80">Panner<br><br><br>
+</div>
+   
+<div class="product">
+<img src=    "E:\22csce046\gw.jpg" alt="Gold Winner Oil">
+    <p><b>Product Name : Gold Winner Refined Sunflower Oil</b></p>
+    <p><b>Price : Rs.140</b></p>    
+<input type ="checkbox" id ="c5" value ="140">Panner<br><br><br>
+</div>
+
+<div class="product">
+<img src=    "E:\22csce046\db.jpg" alt="Dosa Batter">
+    <p><b>Product Name :Dosa Batter</b></p>
+    <p><b>Price : Rs.40</b></p>    
+<input type ="checkbox" id ="c6" value ="40">Dosa Batter<br><br><br>
+</div><br><br>
+
+ 
+    <button style="align-content:center;background-color:seagreen;font-display: block;font-family:Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif'; width:200px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);" onclick="total()"><b>BILL</b> </button>
+    <h2 id="result"></h2>
+ 
+ <script>
+function total() {
+    let total = 0;
+
+    if (document.getElementById("c1").checked) {
+        alert("You have selected milk packet to add to Your cart");
+        total = total + 26;
+    }
+
+    if (document.getElementById("c2").checked) {
+        total = total + 156;
+        alert("You have selected Vegetables to add to your cart");
+    }
+   
+    if(document.getElementById("c3").checked){
+      total = total + 74;
+    alert("You have selected Basmati Rice to add to your cart");                            }
+    if(document.getElementById("c4").checked){
+      total = total + 80;
+    alert("You have selected  Panner(100g) to add to your cart");                            }
+    if(document.getElementById("c5").checked){
+      total = total + 140;
+    alert("You have selected  Gold Winner 1ltr to add to your cart");                            }
+    if(document.getElementById("c6").checked){
+      total = total + 40;
+    alert("You have selected Dosa Batter to add to your cart");                            }
+
+    document.getElementById("result").innerHTML =
+        
+        " Your Bill Amount is : Rs. " + total;
+        
+    
+}
+</script>
+
+
+   
+</body>
+</html>
